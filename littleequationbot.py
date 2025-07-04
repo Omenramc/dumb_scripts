@@ -13,7 +13,6 @@ class equation_info(BaseModel):
 		description="Trivia or curious facts about the equation if there are any")
 
 llm = init_chat_model("gemini-2.5-flash", 
-	model_provider="google_genai", 
-	api_key="AIzaSyDou-bz7lBLsYKxrqyfTscNcE9myVeg9-Q")
+	model_provider="google_genai")
 
 structured_llm = llm.with_structured_output(equation_info)
